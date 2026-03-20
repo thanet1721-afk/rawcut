@@ -8,117 +8,43 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
 
         body {
-            margin: 0;
-            background-color: #ffffff;
-            color: #000000;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            padding: 0 5vw; 
-            box-sizing: border-box;
+            margin: 0; background-color: #ffffff; color: #000000;
+            font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
+            padding: 0 8vw; box-sizing: border-box;
         }
 
         nav {
-            padding: 40px 0; 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky; 
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: #fff;
+            padding: 40px 0; display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.9);
         }
 
-        .logo { 
-            font-size: 1.2rem; 
-            font-weight: 900; 
-            letter-spacing: 2px;
-            text-decoration: none;
-            color: #000;
-        }
+        .logo { font-size: 1.2rem; font-weight: 900; letter-spacing: 2px; text-decoration: none; color: #000; }
+        .nav-links a { color: #000; text-decoration: none; margin-left: 30px; font-size: 0.7rem; letter-spacing: 1px; }
 
-        .nav-links a { 
-            color: #000; 
-            text-decoration: none; 
-            margin-left: 30px; 
-            font-size: 0.7rem; 
-            letter-spacing: 1px;
-        }
+        .hero { height: 40vh; display: flex; justify-content: flex-start; align-items: center; }
+        h1 { font-size: 6vw; font-weight: 900; margin: 0; line-height: 1; }
 
-        .hero {
-            height: 40vh;
-            display: flex;
-            justify-content: flex-start; 
-            align-items: center;
-        }
+        .work-section { padding-bottom: 100px; min-height: 50vh; }
+        
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .item-container { margin-bottom: 20px; animation: fadeIn 1s ease-in; }
+        .item { background-color: #f0f0f0; aspect-ratio: 16/9; overflow: hidden; position: relative; }
+        
+        iframe { width: 100%; height: 100%; border: none; filter: grayscale(100%); transition: 0.5s; }
+        .item:hover iframe { filter: grayscale(0%); }
+        
+        .project-info { margin-top: 12px; font-size: 0.65rem; letter-spacing: 1px; color: #888; text-transform: uppercase; }
 
-        h1 {
-            font-size: 6vw;
-            font-weight: 900;
-            margin: 0;
-            line-height: 1;
-        }
+        footer { padding: 100px 0; border-top: 1px solid #eee; }
+        .footer-text { font-size: 2.5rem; font-weight: 300; margin-bottom: 40px; }
+        .contact-link { color: #000; font-weight: 400; text-decoration: underline; }
 
-        .work-section { padding-bottom: 100px; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 30px;
-        }
+        #loading { font-size: 0.8rem; letter-spacing: 2px; color: #888; text-align: center; width: 100%; margin-top: 50px; }
 
-        .item-container {
-            margin-bottom: 20px;
-        }
-
-        .item {
-            background-color: #f0f0f0;
-            aspect-ratio: 16/9;
-            overflow: hidden;
-            position: relative;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            filter: grayscale(100%);
-            transition: 0.5s;
-        }
-
-        .item:hover iframe {
-            filter: grayscale(0%);
-        }
-
-        .project-info {
-            margin-top: 12px;
-            font-size: 0.65rem;
-            letter-spacing: 1px;
-            color: #888;
-            text-transform: uppercase;
-        }
-
-        footer {
-            padding: 100px 0;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-text {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 40px;
-        }
-
-        .contact-link { color: #000; font-weight: 400; }
-
-        @media (max-width: 1024px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
-            body { padding: 0 5vw; }
-        }
-
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-            h1 { font-size: 12vw; }
-        }
+        @media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } body { padding: 0 5vw; } }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 12vw; } }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
@@ -136,28 +62,8 @@
     </section>
 
     <section class="work-section" id="work">
-        <div class="grid">
-            <div class="item-container">
-                <div class="item">
-                    <iframe src="https://drive.google.com/file/d/1XqfbrGgjwAEc4UhK4zyu6lBQ0iprdTkJ/preview"></iframe>
-                </div>
-                <div class="project-info">MUSIC VIDEO / 2026 / ARTIST NAME</div>
-            </div>
-
-            <div class="item-container">
-                <div class="item">
-                    <iframe src="https://drive.google.com/file/d/1XqfbrGgjwAEc4UhK4zyu6lBQ0iprdTkJ/preview"></iframe>
-                </div>
-                <div class="project-info">COMMERCIAL / 2026 / BRAND NAME</div>
-            </div>
-
-            <div class="item-container">
-                <div class="item">
-                    <iframe src="https://drive.google.com/file/d/1XqfbrGgjwAEc4UhK4zyu6lBQ0iprdTkJ/preview"></iframe>
-                </div>
-                <div class="project-info">FASHION FILM / 2026 / PROJECT NAME</div>
-            </div>
-        </div>
+        <div id="loading">LOADING PROJECTS...</div>
+        <div class="grid" id="project-grid"></div>
     </section>
 
     <footer id="contact">
@@ -168,5 +74,41 @@
         <p style="font-size: 0.6rem; color: #ccc;">© 2026 RAW CUT. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <script>
+        // === เอาลิงก์ TSV จากสเต็ปที่ 2 มาใส่ในเครื่องหมายคำพูดข้างล่างนี้ ===
+        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjlhRzpjlkKja99sebrsfaOShCmtjfz8PLqjX13YkhZKRafHvbghSZ8nqDICia5awX_VXPopDcM2Og/pub?output=tsv'; 
+
+        fetch(sheetUrl)
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.split('\n');
+                const grid = document.getElementById('project-grid');
+                document.getElementById('loading').style.display = 'none'; // ซ่อนคำว่า Loading
+
+                // เริ่มลูปดึงงานมาโชว์ทีละบรรทัด (เริ่มจาก 1 เพราะข้ามหัวข้อบรรทัดแรก)
+                for(let i = 1; i < rows.length; i++) {
+                    if(!rows[i].trim()) continue; // ถ้าบรรทัดว่างให้ข้ามไป
+                    
+                    const columns = rows[i].split('\t'); // แยกคอลัมน์ด้วย Tab
+                    const videoId = columns[0].trim();
+                    const description = columns[1].trim();
+
+                    // สร้างกรอบงานขึ้นมาใหม่
+                    const projectHTML = `
+                        <div class="item-container">
+                            <div class="item">
+                                <iframe src="https://drive.google.com/file/d/${videoId}/preview" loading="lazy"></iframe>
+                            </div>
+                            <div class="project-info">${description}</div>
+                        </div>
+                    `;
+                    grid.innerHTML += projectHTML; // ยัดลงเว็บ
+                }
+            })
+            .catch(error => {
+                document.getElementById('loading').innerText = 'ERROR LOADING PROJECTS.';
+                console.error('Error:', error);
+            });
+    </script>
 </body>
 </html>
