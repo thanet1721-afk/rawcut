@@ -7,25 +7,22 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
 
-        /* 1. ตั้งค่าพื้นฐานและระยะห่างขอบจอ (ที่หาไม่เจอ) */
         body {
             margin: 0;
             background-color: #ffffff;
             color: #000000;
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
-            /* เว้นระยะซ้าย-ขวา 8% ให้ดูหรูแบบ Chainang */
             padding: 0 5vw; 
             box-sizing: border-box;
         }
 
-        /* 2. Navigation */
         nav {
-            padding: 40px 0; /* เอา padding ซ้ายขวาออก เพราะเราใส่ที่ body แล้ว */
+            padding: 40px 0; 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky; /* ให้มันเลื่อนตามแต่ไม่ทับงาน */
+            position: sticky; 
             top: 0;
             width: 100%;
             z-index: 1000;
@@ -48,11 +45,10 @@
             letter-spacing: 1px;
         }
 
-        /* 3. Hero Section */
         .hero {
             height: 40vh;
             display: flex;
-            justify-content: flex-start; /* ชิดซ้ายแบบอาร์ตๆ */
+            justify-content: flex-start; 
             align-items: center;
         }
 
@@ -63,12 +59,11 @@
             line-height: 1;
         }
 
-        /* 4. Work Grid - 3 คอลัมน์พร้อมช่องไฟกว้างๆ */
         .work-section { padding-bottom: 100px; }
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); 
-            gap: 30px; /* ช่องไฟระหว่างคลิป */
+            gap: 30px;
         }
 
         .item-container {
@@ -86,7 +81,6 @@
             width: 100%;
             height: 100%;
             border: none;
-            /* ปรับให้เป็นขาวดำ (ถ้าอยากให้เป็นสีตลอดเวลา ให้ลบ filter บรรทัดนี้ทิ้ง) */
             filter: grayscale(100%);
             transition: 0.5s;
         }
@@ -103,7 +97,6 @@
             text-transform: uppercase;
         }
 
-        /* 5. Footer */
         footer {
             padding: 100px 0;
             border-top: 1px solid #eee;
@@ -117,7 +110,6 @@
 
         .contact-link { color: #000; font-weight: 400; }
 
-        /* ปรับแต่งสำหรับมือถือ */
         @media (max-width: 1024px) {
             .grid { grid-template-columns: repeat(2, 1fr); }
             body { padding: 0 5vw; }
